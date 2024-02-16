@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../Cheatsheet/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+        <title>HTML and CSS Cheatsheet</title>
+    </head>
+    <body>
+        
+        <nav>
+            <ul>
+                <li><a href="#tables">HTML Tables</a></li>
+                <li><a href="#table_attributes">HTML Table Attributes</a></li>
+                <li><a href="#other_tags">Other HTML tags</a></li>
+                <li><a href="#html_attributes">HTML Attributes</a></li>
+                <li><a href="#CSS_selectors">CSS Selectors</a></li>
+                <li><a href="#CSS_properties">CSS properties</a></li>
+                <li id="bmnav"><a href="#box_model">Box Model</a></li>
+            </ul>
+        </nav>
+<main>
+    <h1>HTML and CSS Cheatsheet</h1>
+
+        <!--HTML Tables-->
+
+
+        <div>
+            <h2 id="tables">HTML Tables</h2>
+            <table>
+                <thead> <!--Heading-->
+                    <tr>
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> <!--Row 1 table tag-->
+                        <td>&lt;table&gt;</td>
+                        <td>Table</td>
+                        <td>Creates a table with the tags in the element</td>
+                    </tr>
+                    <tr><!--Row 2 table row tag-->
+                        <td>&lt;tr&gt;</td>
+                        <td>Table Row</td>
+                        <td>Creates the table rows</td>
+                    </tr>
+                    <tr><!--Row 3 table data-->
+                        <td>&lt;td&gt;</td>
+                        <td>Table Data</td>
+                        <td>Creates the cells in the rows</td>
+                    </tr>
+                    <tr><!--Row 4 table heading-->
+                        <td>&lt;th&gt;</td>
+                        <td>Table Headings</td>
+                        <td>Gives titles to rows and columns. Needs a scope attribute to put with the
+                            column or the row. eg. scope = "col" or scope = "row"</td>
+                    </tr>
+                    <tr><!--Row 5 table body-->
+                        <td>&lt;tbody&gt;</td>
+                        <td>Table Body</td>
+                        <td>Should contain all of the tables data including headings</td>
+                    </tr>
+                    <tr><!--Row 6 table body-->
+                        <td>&lt;thead&gt;</td>
+                        <td>Table Head</td>
+                        <td>When we section off the body we should also section off the head</td>
+                    </tr>
+                    <tr><!--Row 7 table footer-->
+                        <td>&lt;tfoot&gt;</td>
+                        <td>Table Footer</td>
+                        <td>The table footer usually contains sums, differences and other results</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+        <!--HTML Table Attributes-->
+
+
+        <div>
+            <h2 id="table_attributes">HTML Table Attributes</h2>
+            <table>
+                <thead>
+                    <tr><!--Row 1 Attribute heading-->
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description & Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><!--Row 2 Scope-->
+                        <td>scope =</td>
+                        <td>Scope</td>
+                        <td>Scope attribute with the value row or col. Row puts the heading for the row. 
+                            Col puts the heading to a column.</td>
+                    </tr>
+                    <tr><!--Row 3 Colspan-->
+                        <td>colspan =</td>
+                        <td>Column Spanning</td>
+                        <td>The colspan attribute takes an integer and that tells the browser 
+                            that the data needs to be that many columns across</td>
+                    </tr>
+                    <tr><!--Row 4 Rowspan-->
+                        <td>rowspan =</td>
+                        <td>Row Spanning</td>
+                        <td>The rowspan attribute takes an integers and tells the browser
+                             the data needs to span that many rows</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!--Other HTML Tags-->
+
+
+        <div>
+            <h2 id="other_tags">Other HTML tags</h2>
+            <table>
+                <thead>
+                    <tr><!--Row 1 Headings-->
+                        <th>Tag</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><!--Row 2 Body tag-->
+                        <td>&lt;body&gt;</td>
+                        <td>Body</td>
+                        <td>Only content between the body tags will be displayed on the webpage</td>
+                    </tr>
+                    <tr><!--Row 3 Heading tags-->
+                        <td>&lt;h1-h6&gt;</td>
+                        <td>Headings 1 - 6</td>
+                        <td>Six different headings. Heading 1 is the largest and they become smaller until heading 6</td>
+                    </tr>
+                    <tr><!--Row 4 divs-->
+                        <td>&lt;div&gt;</td>
+                        <td>Div</td>
+                        <td>Short for division, useful for grouping elements together specifically for styling CSS.
+                            Can contain any text or elements.</td>
+                    </tr>
+                    <tr><!-- Row 5 paragraph-->
+                        <td>&lt;p&gt;</td>
+                        <td>Paragraph</td>
+                        <td>Displays chunks of text</td>
+                    </tr>
+                    <tr><!--Row 6 span-->
+                        <td>&lt;span&gt;</td>
+                        <td>Span</td>
+                        <td>Contains short pieces of text</td>
+                    </tr>
+                    <tr><!-- Row 7 line breaks-->
+                        <td>&lt;br&gt;</td>
+                        <td>Line Break</td>
+                        <td>Spacing in code doesn't affect how it's displayed on the page but 
+                            the line break element adds a break in the text.</td>
+                    </tr>
+                    <tr><!--Row 8 Unordered lists-->
+                        <td>&gt;ul&gt;</td>
+                        <td>Unordered Lists</td>
+                        <td>Creates an unordered/ bullet point list. All elements have to be 
+                            in an li element</td>
+                    </tr>
+                    <tr><!--Row 9 Ordered List -->
+                        <td>&gt;ol&lt;</td>
+                        <td>Ordered List</td>
+                        <td>Creates an ordered/ numbered list. All elements need to be between li element tags</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;li&gt;</td> <!--Row 10 List element-->
+                        <td>List</td>
+                        <td>Each point in the lists must be between this element to be displayed</td>
+                    </tr>
+                    <tr><!--Row 11 Images-->
+                        <td>&lt;img&gt;</td>
+                        <td>Image</td>
+                        <td>Adds an image into a webpage, self-closing tag and needs an src attribute with the image source to link.</td>
+                    </tr>
+                    <tr><!-- Row 12 Videos-->
+                        <td>&lt;video&gt;</td>
+                        <td>Video</td>
+                        <td>Displays videos, needs an src for the link, a height & width attribute for the video size, a controls attribute for 
+                            basic controls and in between your video tags add "Video not supported" to display if the video doesn't load.</td>
+                    </tr>
+                    <tr><!-- Row 13 Document type-->
+                        <td>&lt;!DOCTYPE html&gt;</td>
+                        <td>Document Type Declaration</td>
+                        <td>Tells the browser what type of document to expect, refers to HTML 5</td>
+                    </tr>
+                    <tr><!-- Row 14 HTML tag-->
+                        <td>&lt;html&gt;</td>
+                        <td>HTML Tag</td>
+                        <td>Everything must be within the html tag</td>
+                    </tr>
+                    <tr><!-- Row 15 Head-->
+                        <td>&lt;head&gt;</td>
+                        <td>Head</td>
+                        <td>Gives the browser information about the page itself, contains metadata and not displayed on the webpage</td>
+                    </tr>
+                    <tr><!--Row 16 title -->
+                        <td>&lt;title&gt;</td>
+                        <td>Title</td>
+                        <td>The title of the webpage is always in the head. The title will be displayed on the tab.</td>
+                    </tr>
+                    <tr><!-- Row 17 anchor-->
+                        <td>&lt;a&gt;</td>
+                        <td>Anchor</td>
+                        <td>Add links by wrapping the text in an anchor element. Use the href attribute with the link 
+                            source. Use the target attribute to tell how the link should be opened.</td>
+                    </tr>
+                    <tr><!-- Row 18 Comment-->
+                        <td>&lt;!-- ... --&gt;</td>
+                        <td>Comment</td>
+                        <td>Characters between the comment marks will be ignored by the browser. This helps others to understand your code and also allows you to experiment 
+                            with different codes by commenting it out.</td>
+                    </tr>
+                    <tr><!-- Row 19 Header-->
+                        <td>&lt;header&gt;</td>
+                        <td>Header</td>
+                        <td>Semantic tag. Usually contains introductory content or a navigation element.</td>
+                    </tr>
+                    <tr><!-- Row 20 Nav-->
+                        <td>&lt;nav&gt;</td>
+                        <td>Nav</td>
+                        <td>Semantic tag. Used for navigation links or contents tables. Used instead of a div.</td>
+                    </tr>
+                    <tr><!-- Row 21 Main-->
+                        <td>&lt;main&gt;</td>
+                        <td>Main</td>
+                        <td>Semantic tag. Holds the dominant content</td>
+                    </tr>
+                    <tr><!-- Row 22 Footer-->
+                        <td>&lt;footer&gt;</td>
+                        <td>Footer</td>
+                        <td>Semantic tag. The footer element usually contains; contact info, copyright info, terms of use,
+                            site map or reference to the top of the page links.</td>
+                    </tr>
+                    <tr><!-- Row 23 Article -->
+                        <td>&lt;article&gt;</td>
+                        <td>Article</td>
+                        <td>Semantic Tag. Contains content that makes sense when on it's own</td>
+                    </tr>
+                    <tr><!--Row 24 Section-->
+                        <td>&lt;section&gt;</td>
+                        <td>Section</td>
+                        <td>Semantic Tag. Can be elements like chapters or elements.</td>
+                    </tr>
+                    <tr><!--Row 25 Aside-->
+                        <td>&lt;aside&gt;</td>
+                        <td>Aside</td>
+                        <td>Semantic Tag. Marks additional information. Common uses being; bibliographies, end notes, comments, pull quotes, editorial sidebars
+                            and additional information.</td>
+                    </tr>
+                    <tr><!-- Row 26 Figure-->
+                        <td>&lt;figure&gt;</td>
+                        <td>Figure</td>
+                        <td>Semantic Tag. What we put around media.</td>
+                    </tr>
+                    <tr><!--Row 27 figcaption-->
+                        <td>&lt;figcaption&gt;</td>
+                        <td>Figcaption</td>
+                        <td>Semantic tag to caption the media in the figure element.</td>
+                    </tr>
+                    <tr><!--Row 28 Audio-->
+                        <td>&lt;audio&gt;</td>
+                        <td>Audio</td>
+                        <td>Embeds audio into the webpage. Needs an src, type and controls attribute</td>
+                    </tr>
+                    <tr><!--Row 29 embed-->
+                        <td>&lt;embed/&gt;</td>
+                        <td>Embed</td>
+                        <td>Use embed to embed an gif and is a self-closing tag. It used to be for all media but no longer practice.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!--HTML Attributes-->
+
+
+        <div>
+            <h2 id="html_attributes">HTML Attributes</h2>
+            <table>
+                <thead>
+                    <tr><!--Row 1 Headings-->
+                        <th>Attribute</th>
+                        <th>Name</th>
+                        <th>Description and Values</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><!--Row 2 ID -->
+                        <td>id = ""</td>
+                        <td>ID</td>
+                        <td>Names an individual element and the highest specification</td>
+                    </tr>
+                    <tr><!--Row 3 src-->
+                        <td>src=""</td>
+                        <td>Source</td>
+                        <td>Attribute that links either a local file or URL to an image or audio element.</td>
+                    </tr>
+                    <tr><!--Row 5 alt-->
+                        <td>alt=""</td>
+                        <td>Alternative description</td>
+                        <td>Makes images and videos more accessible by describing the image or video.
+                            Also helps SEO and improves site rankings.</td>
+                    </tr>
+                    <tr><!--Row 6 width-->
+                        <td>width=</td>
+                        <td>Width</td>
+                        <td>Sets the width of a video element</td>
+                    </tr>
+                    <tr><!--Row 7 height-->
+                        <td>height=</td>
+                        <td>Height</td>
+                        <td>Sets the height of a video</td>
+                    </tr>
+                    <tr><!--Row 8 Controls-->
+                        <td>controls</td>
+                        <td>Controls</td>
+                        <td>Includes basic video or audio controls eg play & pause. You can also use autoplay controls to autoplay
+                            the content.
+                        </td>
+                    </tr>
+                    <tr><!-- Row 9 href-->
+                        <td>href=""</td>
+                        <td>href</td>
+                        <td>uses a URL to link the element. Used in the anchor element</td>
+                    </tr>
+                    <tr><!-- Row 10 target-->
+                        <td>target=""</td>
+                        <td>target</td>
+                        <td>Tells a link how to open it. The "_blank" value opens the link in a new tab </td>
+                    </tr>
+                    <tr><!--Row 11 type-->
+                        <td>type=""</td>
+                        <td>Type</td>
+                        <td>In an audio element you have to specify the type of audio. The value can be "audio/mp3"</td>
+                    </tr>
+                    <tr><!--Row 12 loop-->
+                        <td>loop</td>
+                        <td>Loop</td>
+                        <td>The loop attribute plays the media continuously</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!--CSS Selectors-->
+
+
+        <div>
+            <h2 id="CSS_selectors">CSS Selectors</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Selector</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>* {}</td>
+                            <td>Universal Selector</td>
+                            <td>Selects all the elements of any type. Mainly used for resetting the default browser
+                                or all children of a parent element.</td>
+                        </tr>
+                        <tr>
+                            <td>p {}</td>
+                            <td>Type Selector</td>
+                            <td>Selects a specific html element to style. </td>
+                        </tr>
+                        <tr>
+                            <td>.class{}</td>
+                            <td>Class Selector</td>
+                            <td>Selects everything with the specific class attribute.</td>
+                        </tr>
+                        <tr>
+                            <td>#id{}</td>
+                            <td>ID Selector</td>
+                            <td>A uniquely styled element. Can only be used once.</td>
+                        </tr>
+                        <tr>
+                            <td>:focus</td>
+                            <td>Focus</td>
+                            <td>Pseudo-class. Matches when an element has focus</td>
+                        </tr>
+                        <tr>
+                            <td>:visited</td>
+                            <td>Visited</td>
+                            <td>Pseudo-class. Styles when the link has been visited</td>
+                        </tr>
+                        <tr>
+                            <td>:disabled</td>
+                            <td>Disabled</td>
+                            <td>Pseudo-class. If the element has been deactivated it will be styled this way</td>
+                        </tr>
+                        <tr>
+                            <td>:active</td>
+                            <td>Active</td>
+                            <td>Pseudo-class. When the user presses down on the mouse it will be styled this way.</td>
+                        </tr>
+                        <tr>
+                            <td>:hover</td>
+                            <td>Hover</td>
+                            <td>Pseudo-class. When the users mouse hovers over the element it will be styled this way.</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+
+
+        <!--CSS Properties-->
+
+
+        <div>
+            <h2 id="CSS_properties">CSS Properties</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>font-family:</td>
+                        <td>Refers to the typeface. The font must be installed on the user's computer or 
+                            downloaded with the site. Can use <a href="https://www.cssfontstack.com/">web safe fonts</a> as 
+                            they are supported by most browsers. Enclose the typeface in quotation marks.</td>
+                    </tr>
+                    <tr>
+                        <td>font-size:</td>
+                        <td>changes to the font size happen in px</td>
+                    </tr>
+                    <tr>
+                        <td>font-weight:</td>
+                        <td>how bold or thin a text is. The values can be bold, thin, normal or a value of 0 - 1000</td>
+                    </tr>
+                    <tr>
+                        <td>text-align:</td>
+                        <td>Aligns the text in the element that holds it. Values can be left, center, right or justify.</td>
+                    </tr>
+                    <tr>
+                        <td>color:</td>
+                        <td>Styles the foreground or text color of the element</td>
+                    </tr>
+                    <tr>
+                        <td>background-color:</td>
+                        <td>Styles the background color</td>
+                    </tr>
+                    <tr>
+                        <td>opacity:</td>
+                        <td>How transparent an element is and measured as a decimal from 0-1.</td>
+                    </tr>
+                    <tr>
+                        <td>background-image: url("...")</td>
+                        <td>make the background of the element an image.</td>
+                    </tr>
+                    <tr>
+                        <td>width:</td>
+                        <td>The width of the content in px</td>
+                    </tr>
+                    <tr>
+                        <td>height:</td>
+                        <td>The height of the content in px</td>
+                    </tr>
+                    <tr>
+                        <td>padding:</td>
+                        <td>The space between the content and the edge of the element. In px.</td>
+                    </tr>
+                    <tr>
+                        <td>border:</td>
+                        <td>the thickness and style of the border around the content area. Width in px, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#values">style</a> color</td>
+                    </tr>
+                    <tr>
+                        <td>margin:</td>
+                        <td>The space between the border and the outside edge of the element. In px.</td>
+                    </tr>
+                    <tr>
+                        <td>overflow:</td>
+                        <td>If the content extends the screen how do you view it. hidden, scroll, visible.</td>
+                    </tr>
+                    <tr>
+                        <td>border-radius:</td>
+                        <td>Modify the corners of a border by px or %</td>
+                    </tr>
+                    <tr>
+                        <td>box-sizing:</td>
+                        <td>Controls the type of box model the browser should use. The default is content-box but could change to border-box.</td>
+                    </tr>
+                    <tr>
+                        <td>position:</td>
+                        <td>Changes the position of an element. Relative, absolute, fixed, sticky, static(default)</td>
+                    </tr>
+                    <tr>
+                        <td>display:</td>
+                        <td>Inline has a box wrapped tightly around the element. Block, fills the entire width. Inline-block makes elements have the ability to appear
+                            next to each other.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--Box Model-->
+
+        <div>
+            <h2 id="box_model">Box Model</h2>
+
+            <img src="../Cheatsheet/Resources/Box Model.png" alt="Image of a CSS content box model with examples of content, padding, margin and border.">
+        </div>
+    </main>
+    </body>
+</html>
