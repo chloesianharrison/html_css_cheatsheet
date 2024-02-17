@@ -44,19 +44,35 @@ li{
     margin-top: 10px;
 }
 
+.nav_link a {
+    color:white; 
+    font-weight: normal;
+}
+
+.nav_link a:visited {
+    color: #EBD9B4;
+}
+
+.nav_link a:hover {
+    font-size: 18px;
+}
 #bmnav{
     padding-top: 45px;
     padding-bottom: 30px;
 }
 
 a:visited{
-    color:white;
+    color:#3c5152;
 }
 
 a{
-    color:white;
+    color:#638889;
+    font-weight: bold;
 }
 
+a:hover {
+    font-size: 18px;
+}
 table{
     max-width: 800px;
     margin: 0 auto;
